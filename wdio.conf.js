@@ -53,7 +53,10 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        chromeOptions: {
+            args: ['disable-gpu']
+        }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -106,7 +109,10 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    //services: ['chromedriver'],
+    services: ["testingbot"],
+    user: process.env.TB_KEY,
+    key: process.env.TB_SECRET,
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -126,8 +132,9 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ["dot"],
-
-
+    reporterOptions: {
+		outputDir: './'
+	},
     
     //
     // Options to be passed to Mocha.
