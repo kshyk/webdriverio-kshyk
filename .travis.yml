@@ -7,6 +7,8 @@ cache:
   directories:
     - node_modules
 addons:
+  apt:
+    update: true
   chrome: stable
 notifications:
   email:
@@ -14,9 +16,6 @@ notifications:
       - jj.turkiewicz@gmail.com
     on_success: never
     on_failure: always
-addons:
-  apt:
-    update: true
 git:
   quiet: true
 env:
