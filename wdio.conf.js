@@ -94,7 +94,8 @@ exports.config = {
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
     //baseUrl: "http://localhost",
-    baseUrl: "https://" + user + ":" + key + "@hub.testingbot.com/wd/hub",
+    baseUrl: "https://" + process.env.TB_KEY + ":" + process.env.TB_SECRET + "@hub.testingbot.com/wd/hub",
+
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
