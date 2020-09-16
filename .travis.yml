@@ -8,6 +8,9 @@ cache:
     - node_modules
 before_install:
   - npm i --save-dev @wdio/cli
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "npm config set spin false"
 addons:
   apt:
     update: true
