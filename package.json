@@ -28,5 +28,8 @@
     "@wdio/testingbot-service": "^6.4.7",
     "chromedriver": "^85.0.0",
     "wdio-chromedriver-service": "^6.0.3"
+  },
+  "dependencies": {
+    "optionator": "^0.9.1"
   }
 }
