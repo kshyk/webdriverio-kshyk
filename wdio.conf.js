@@ -6,7 +6,9 @@ exports.config = {
     headless: true,
     user: process.env.TB_KEY,
     key: process.env.TB_SECRET,
-    host: 'hub.testingbot.com',
+    hostname: 'hub.testingbot.com',
+    port: 4444,
+    protocol: 'https',
     // ==================
     // Specify Test Files
     // ==================
