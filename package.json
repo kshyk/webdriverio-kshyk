@@ -5,6 +5,7 @@
     "@wdio/mocha-framework": "^7.3.0",
     "@wdio/spec-reporter": "^7.3.0",
     "@wdio/sync": "^7.3.0",
+    "@wdio/testingbot-service": "^7.3.0",
     "chromedriver": "^89.0.0",
     "wdio-chromedriver-service": "^7.0.0"
   }
